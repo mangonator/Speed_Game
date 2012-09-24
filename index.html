@@ -14,10 +14,15 @@
 	,	i = 0
 	,	button = false;
 
+	function button_anim(button, state ) { // State 0/1 (off/on). Light animation for buttons.
+		if(state == 1) $(button).css('box-shadow','0 0 20px rgba(255,0,0,.7)');
+		else  $(button).css('box-shadow','inset 3px 3px 100px #000');
+	}
+	
 	function game() {
 		$('#p1_1, #p2_1').mousedown(function() {
 			if (button == false) {
-				$('#p1_1, #p2_1').css('box-shadow','0 0 20px rgba(255,0,0,.7)');
+				button_anim('#p1_1,#p2_1', 1 );
 				button = true;
 				if (input) {
 					sequence.push(1);
@@ -29,13 +34,13 @@
 			}
 		})
 		.mouseup(function() {
-				$('#p1_1, #p2_1').css('box-shadow','inset 3px 3px 100px #000');
-				button = false;
+			button_anim('#p1_1,#p2_1', 0 );
+			button = false;
 		});
 		
 		$('#p1_2, #p2_2').mousedown(function() {
 			if (button == false) {
-				$('#p1_2, #p2_2').css('box-shadow','0 0 20px rgba(0,0,255,.7)');
+				button_anim('#p1_2,#p2_2', 1 );
 				button = true;
 				if (input) {
 					sequence.push(2);
@@ -47,13 +52,13 @@
 			}
 		})		
 		.mouseup(function() {
-				$('#p1_2, #p2_2').css('box-shadow','inset 3px 3px 100px #000');
-				button = false;
+			button_anim('#p1_2,#p2_2', 0 );
+			button = false;
 		});
 		
 		$('#p1_3, #p2_3').mousedown(function() {
 			if (button == false) {
-				$('#p1_3, #p2_3').css('box-shadow','0 0 20px rgba(0,255,0,.7)');
+				button_anim('#p1_3,#p2_3', 1 );
 				button = true;
 				if (input) {
 					sequence.push(3);
@@ -65,13 +70,13 @@
 			}
 		})
 		.mouseup(function() {
-				$('#p1_3, #p2_3').css('box-shadow','inset 3px 3px 100px #000');
-				button = false;
+			button_anim('#p1_3,#p2_3', 0 );
+			button = false;
 		});
 		
 		$('#p1_4, #p2_4').mousedown(function() {
 			if (button == false) {
-				$('#p1_4, #p2_4').css('box-shadow','0 0 20px rgba(255,255,0,.7)');
+				button_anim('#p1_4,#p2_4', 1 );
 				button = true;
 				if (input) {
 					sequence.push(4);
@@ -83,7 +88,7 @@
 			}
 		})
 		.mouseup(function() {
-				$('#p1_4, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
+			button_anim('#p1_4,#p2_4', 0 );
 				button = false;
 		});
 		
