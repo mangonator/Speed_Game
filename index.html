@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' type='text/css' href='style.css'> 
+	<script type='text/javascript' src='jquery.js'></script>
+	<title></title>
+	<script type="text/javascript">
+	var sequence = new Array()
+	,	play = null
+	,	level = 5
+	,	input = true
+	,	i = 0
+	,	button = false;
+
+	function game() {
+		$('#p1_1, #p2_1').mousedown(function() {
+			if (button == false) {
+				$('#p1_1, #p2_1').css('box-shadow','0 0 20px rgba(255,0,0,.7)');
+				button = true;
+				if (input) {
+					sequence.push(1);
+				}else if (sequence[i] != 1) {
+					endGame();
+				}else{
+					i++;
+				}
+			}
+		})
+		.mouseup(function() {
+				$('#p1_1, #p2_1').css('box-shadow','inset 3px 3px 100px #000');
+				button = false;
+		});
+		
+		$('#p1_2, #p2_2').mousedown(function() {
+			if (button == false) {
+				$('#p1_2, #p2_2').css('box-shadow','0 0 20px rgba(0,0,255,.7)');
+				button = true;
+				if (input) {
+					sequence.push(2);
+				}else if (sequence[i] != 2) {
+					endGame();
+				}else{
+					i++;
+				}
+			}
+		})		
+		.mouseup(function() {
+				$('#p1_2, #p2_2').css('box-shadow','inset 3px 3px 100px #000');
+				button = false;
+		});
+		
+		$('#p1_3, #p2_3').mousedown(function() {
+			if (button == false) {
+				$('#p1_3, #p2_3').css('box-shadow','0 0 20px rgba(0,255,0,.7)');
+				button = true;
+				if (input) {
+					sequence.push(3);
+				}else if (sequence[i] != 3) {
+					endGame();
+				}else{
+					i++;
+				}
+			}
+		})
+		.mouseup(function() {
+				$('#p1_3, #p2_3').css('box-shadow','inset 3px 3px 100px #000');
+				button = false;
+		});
+		
+		$('#p1_4, #p2_4').mousedown(function() {
+			if (button == false) {
+				$('#p1_4, #p2_4').css('box-shadow','0 0 20px rgba(255,255,0,.7)');
+				button = true;
+				if (input) {
+					sequence.push(4);
+				}else if (sequence[i] != 4) {
+					endGame();
+				}else{
+					i++;
+				}
+			}
+		})
+		.mouseup(function() {
+				$('#p1_4, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
+				button = false;
+		});
+		
+		if (sequence.length < level)
+			$('#turn').html('<p>' + (level - (sequence.length)) + '</p>');
+		else
+			$('#turn').html('<p>' + i + '</p>');
+		if (sequence.length == level) {
+			input = false;
+		}
+		
+		if (i == level && sequence.length == level && sequence.length == i) {
+			i = 0;
+			sequence = [];
+			input = true;
+			level++;
+		}
+	}
+
+	function endGame() {
+		alert('YOU LOSE! -reload page, shit ain\' implimented yet properly!');
+	}
+	
+	$(document).ready(function() {
+		$('#lauta').css({'width':$(window).width(),'height':$(window).height()});
+		play = setInterval(game, 30);
+	});
+	</script>
+</head>
+<body>
+<div id="lauta">
+	<div id="p1_1"></div>
+	<div id="p1_2"></div>
+	<div id="p1_3"></div>
+	<div id="p1_4"></div>
+	<div id="turn"></div>
+	<div id="p2_1"></div>
+	<div id="p2_2"></div>
+	<div id="p2_3"></div>
+	<div id="p2_4"></div>
+</div>
+</body>
+</html>
