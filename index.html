@@ -12,6 +12,7 @@
 	,	input = true
 	,	i = 0
 	,	turn = 0
+	,	player = 1
 	,	button = false;
 
 	function button_anim(button, background_color, state ) { 	// State 0/1 (off/on). Light animation for buttons. backround color format: 'rgba(255,0,0,.7)' or '#000' 
@@ -23,12 +24,20 @@
 	
 		/// BUTTON 1
 	
-	if (turn == 0) {
-		$('#overlay').css('top','280px');
-	} else {
-		$('#overlay').css('top','0px');
+	if (player = 1) {
+		if (turn == 0 && button != true) {
+			$('#overlay').css('top','280px');
+		} else if (button != true) {
+			$('#overlay').css('top','0px');
+		}
+	}else if (player = 2) {
+		if (turn == 0 && button != true) {
+			$('#overlay').css('top','0px');
+		} else if (button != true) {
+			$('#overlay').css('top','280px');
+		}
 	}
-	
+		
 		$('#p1_1, #p2_1').mousedown(function() {
 			if (button == false) {
 				button_anim('#p1_1,#p2_1', 'rgba(255,0,0,.7)', 1 );
@@ -125,8 +134,12 @@
 		}
 	}
 
-	function endGame() {
-		alert('YOU LOSE! -reload page, shit ain\' implimented yet properly!');
+	function endGame(){
+			$('#overlay').css({'top':'0','left':'0','height':'480px'});
+			$('#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
+			$('#message').fadeIn().html("Player " + player + " got to level: " + (level*1.0-4) + "<br> <input type='button' value='Start turn'>");
+			if (player == 1) player = 2;
+			if (player == 2) player = 1;
 	}
 	
 	$(document).ready(function() {
@@ -137,6 +150,7 @@
 </head>
 <body>
 <div id="lauta">
+	<div id="message"></div>
 	<div id="overlay"></div>
 	<div id="p1">P1</div>
 	<div id="p1_1"></div>
