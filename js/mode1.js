@@ -1,3 +1,5 @@
+// Damn Github Y U NO MERGE?
+
 //VARIABLES
 var sequence = new Array()
 ,	play = null
