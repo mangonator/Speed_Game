@@ -1,45 +1,54 @@
 /* CSS Document for Apptacular */
+body{
+margin: 0px;
+}
+
 
 p{
 text-align: center;
 }
 
 #board{
-  border-style: solid;
-    border-width: 2px;
     width:800px;
     height:480px;
+    border: 2px solid black;
 }
   #gamearea{
-    border-style: solid;
-    border-width: 2px;
-    width:720px;
+    width:726px;
     height:480px;
     float:right;
     margin: 0px 0 0px 0;
   }
   
       #player1{
-      width:720px;
-      height:195px;
+      width:706px;
+      height:200px;
       margin: 0px 0px 0px 0px;
       float:right;
       background: #EF9F28;
+      
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Safari and Chrome */
+      -o-transform: rotate(180deg); /* Opera */
+      -moz-transform: rotate(180deg); /* Firefox */
+      padding: 0 0 0 20px;
       }
        
 
       #player2{
-      width:720px;
-      height:195px;
+      width:706px;
+      height:200px;
       margin: 0px 0px 0px 0px;
       float:left;
       padding: 5px 0 0 0;
       background: #EF9F28;
+      padding: 0 0 0 20px;
       }
 
 
   #keskipalkki{
-      width:720px;
+      width:726px;
       height:80px;
       margin: 0px 0px 0px 0px;
       float:left;
@@ -92,7 +101,7 @@ text-align: center;
 	z-index:3;
 	width:700px;
 	height:180px;
-	background:rgba(0,0,0,0);
+	background:rgba(0,0,0,.5);
 	top:20px;
 	left:90px;
 }
@@ -104,6 +113,7 @@ text-align: center;
 	font-family:"Verdana" Verdana;
 	font-size: 25px;
 	color:#fcfcfc;
+  float: right;
 }
 
 #message {
@@ -116,4 +126,36 @@ text-align: center;
 	display:none;
 	background:#fcfcfc;
 	border:1px #000 solid;
+}
+
+#scorep1{
+border: 2px solid black;
+width: 150px;
+height: 70px;
+float: left;
+margin: 3px 5px 3px 5px;
+transform: rotate(180deg);
+-ms-transform: rotate(180deg); /* IE 9 */
+-webkit-transform: rotate(180deg); /* Safari and Chrome */
+-o-transform: rotate(180deg); /* Opera */
+-moz-transform: rotate(180deg); /* Firefox */
+text-align: center;
+}
+
+#scorep2{
+border: 2px solid black;
+width: 150px;
+height: 70px;
+float: left;
+margin: 3px 5px 3px 5px;
+text-align: center;
+}
+
+#infobox{
+border: 2px inset grey;
+width: 300px;
+height: 70px;
+float: left;
+margin: 3px 5px 3px 5px;
+text-align: center;
 }
