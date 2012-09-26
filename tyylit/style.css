@@ -1,0 +1,115 @@
+/* CSS Document for Apptacular */
+
+p{
+text-align: center;
+}
+
+#board{
+  border-style: solid;
+    border-width: 2px;
+    width:800px;
+    height:480px;
+}
+  #gamearea{
+    border-style: solid;
+    border-width: 2px;
+    width:720px;
+    height:480px;
+    float:right;
+    margin: 0px 0 0px 0;
+  }
+  
+      #player1{
+      width:720px;
+      height:195px;
+      margin: 0px 0px 0px 0px;
+      float:right;
+      background: #EF9F28;
+      }
+       
+
+      #player2{
+      width:720px;
+      height:195px;
+      margin: 0px 0px 0px 0px;
+      float:left;
+      padding: 5px 0 0 0;
+      background: #EF9F28;
+      }
+
+
+  #keskipalkki{
+      width:720px;
+      height:80px;
+      margin: 0px 0px 0px 0px;
+      float:left;
+      background: #EB3636;
+}
+
+
+
+  #ylapalkki{
+  border: outset 4px black;
+    width:66px;
+    height:472px;
+    margin: 0px 0px 0px 0px;
+    float:left;
+    background: #F01D1D;
+}
+
+#sisalto{
+}
+
+#sisalto{
+}
+
+
+
+#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4 {
+	width: 150px;
+	height: 150px;
+	border:1px #000 solid;
+	margin:5px 10px 5px 10px;
+	padding:0;
+  float: left;
+	border-radius:90px;
+	box-shadow:inset 3px 3px 100px #000;
+}
+
+#p1_3, #p2_2 {
+
+}
+#p1_2, #p2_3 {
+
+}
+#p1_1, #p2_4 {
+
+}
+#p2_1, #p2_2, #p2_3, #p2_4 {
+
+}
+#p1_1, #p2_1 {background:rgba(255,0,0,.8);}
+#p1_2, #p2_2 {background:rgba(0,0,255,.8);}
+#p1_3, #p2_3 {background:rgba(0,255,0,.8);}
+#p1_4, #p2_4 {background:rgba(255,255,0,.8);}
+
+
+#overlay {
+	border-radius:100px;
+	position:absolute;
+	z-index:3;
+	width:800px;
+	height:200px;
+	background:rgba(0,0,0,.5);
+	top:0;
+	left:0;
+}
+
+
+#turn {
+   width: 40px;
+   height: 40px;
+	 font-family:"Verdana" Verdana;
+	 font-size: 25px;
+	 color:#fcfcfc;
+   }
