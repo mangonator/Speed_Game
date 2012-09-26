@@ -13,13 +13,21 @@ var sequence = new Array()
 ,	i = 0
 ,	turn = 0
 ,	player = 1
-,	button = false;
+,	button = false
+,	scoreP1 = 0
+,	scoreP2 = 0;
 
 
 //BUTTON PUSH COLORING
 function button_anim(button, background_color, state ) { 	// State 0/1 (off/on). Light animation for buttons. backround color format: 'rgba(255,0,0,.7)' or '#000' 
 	if(state == 1) $(button).css('box-shadow','0 0 20px ' + background_color);
 	else  $(button).css('box-shadow','inset 3px 3px 100px' + background_color);
+}
+
+//SCORE UPDATER TO HTML
+function score(player, p_score) { // player = 'p1' or 'p2', p_score = player specific score.
+	$('#score' + player).html( player + ' score' + '<p>' + p_score  + '</p>'); // modifies #score + player number innerhtml
+	//alert(player + " " + p_score) -DEBUG CODE-
 }
 
 //MAIN GAME
@@ -150,8 +158,16 @@ function changeplayer() {
 
 //END GAME
 function endGame(){
-	if (player == 1) player = 2;
-	else player = 1;
+	if (player == 1) {
+		player = 2;
+		scoreP1 += level*1.0-5
+		score('p1',scoreP1)
+	}
+	else {
+		player = 1;
+		scoreP2 += level*1.0-5
+		score('p2',scoreP2)
+	}
 	$('#overlay').css({'top':'20px','height':'480px'});
 	$('#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
 	$('#message').fadeIn().html("Player " + player + " got to level: " + (level*1.0-4) + "<br> <input type='button' value='Start turn' onclick='changeplayer()'>");
@@ -161,5 +177,7 @@ function endGame(){
 //"ONLOAD"
 $(document).ready(function() {
 	$('#lauta').css({'width':$(window).width(),'height':$(window).height()});
+	score('p1',scoreP1);
+	score('p2',scoreP2);
 	play = setInterval(game, 40);
 });
