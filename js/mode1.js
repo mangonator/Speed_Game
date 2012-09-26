@@ -1,8 +1,10 @@
-<<<<<<< HEAD
-=======
-// Damn Github Y U NO MERGE?
+/*
+GitHub 
+wat r u doin?
+GitHub!
+STAHP!
+*/
 
->>>>>>> smigu/master
 //VARIABLES
 var sequence = new Array()
 ,	play = null
@@ -16,37 +18,8 @@ var sequence = new Array()
 
 //BUTTON PUSH COLORING
 function button_anim(button, background_color, state ) { 	// State 0/1 (off/on). Light animation for buttons. backround color format: 'rgba(255,0,0,.7)' or '#000' 
-<<<<<<< HEAD
-	if(state == 1)
-		$(button).css('box-shadow','0 0 20px ' + background_color);
-	else
-		$(button).css('box-shadow','inset 3px 3px 100px' + background_color);
-}
-
-//Change player
-function changeplayer() {
-	turn = i = 0;
-	level = 5;
-	sequence = [];
-	$('#overlay').css('height','180px');
-	$('#message').fadeOut();
-	input = true;
-	button = false;
-}
-
-//END GAME
-function endGame(){
-	if (player == 1) 
-		player = 2;
-	else 
-		player = 1;
-	$('#overlay').css({'top':'20px','height':'480px'});
-	$('#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
-	$('#message').fadeIn().html("Player " + player + " got to level: " + (level*1.0-4) + "<br> <input type='button' value='Start turn' onclick='changeplayer()'>");
-=======
 	if(state == 1) $(button).css('box-shadow','0 0 20px ' + background_color);
 	else  $(button).css('box-shadow','inset 3px 3px 100px' + background_color);
->>>>>>> smigu/master
 }
 
 //MAIN GAME
@@ -60,11 +33,7 @@ function game() {
 			$('#overlay').css('top','300px');
 		else if (button != true) 
 			$('#overlay').css('top','20px');
-<<<<<<< HEAD
-	} else if (player == 2) {
-=======
 	} else if (player == 2){
->>>>>>> smigu/master
 		$('#p2').css('color','#f00');
 		$('#p1').css('color','#000');
 		if (turn == 0 && button != true) 
@@ -78,14 +47,6 @@ function game() {
 		if (button == false) {
 			button_anim('#p1_1,#p2_1', 'rgba(255,0,0,.7)', 1 );
 			button = true;
-<<<<<<< HEAD
-			if (input) 
-				sequence.push(1);
-			else if (sequence[i] != 1)
-				endGame();
-			else
-				i++;
-=======
 			if (input) {
 				sequence.push(1);
 			}else if (sequence[i] != 1) {
@@ -93,7 +54,6 @@ function game() {
 			}else{
 				i++;
 			}
->>>>>>> smigu/master
 		}
 	})
 	.mouseup(function() {
@@ -106,14 +66,6 @@ function game() {
 		if (button == false) {
 			button_anim('#p1_2,#p2_2', 'rgba(0,0,255,.7)', 1 );
 			button = true;
-<<<<<<< HEAD
-			if (input) 
-				sequence.push(2);
-			else if (sequence[i] != 2)
-				endGame();
-			else
-				i++;
-=======
 			if (input) {
 				sequence.push(2);
 			}else if (sequence[i] != 2) {
@@ -121,7 +73,6 @@ function game() {
 			}else{
 				i++;
 			}
->>>>>>> smigu/master
 		}
 	})		
 	.mouseup(function() {
@@ -134,14 +85,6 @@ function game() {
 		if (button == false) {
 			button_anim('#p1_3,#p2_3', 'rgba(0,255,0,.7)', 1 );
 			button = true;
-<<<<<<< HEAD
-			if (input)
-				sequence.push(3);
-			else if (sequence[i] != 3)
-				endGame();
-			else
-				i++;
-=======
 			if (input) {
 				sequence.push(3);
 			}else if (sequence[i] != 3) {
@@ -149,7 +92,6 @@ function game() {
 			}else{
 				i++;
 			}
->>>>>>> smigu/master
 		}
 	})
 	.mouseup(function() {
@@ -162,14 +104,6 @@ function game() {
 		if (button == false) {
 			button_anim('#p1_4,#p2_4', 'rgba(255,255,0,.7)', 1 );
 			button = true;
-<<<<<<< HEAD
-			if (input)
-				sequence.push(4);
-			else if (sequence[i] != 4)
-				endGame();
-			else
-				i++;
-=======
 			if (input) {
 				sequence.push(4);
 			}else if (sequence[i] != 4) {
@@ -177,7 +111,6 @@ function game() {
 			}else{
 				i++;
 			}
->>>>>>> smigu/master
 		}
 	})
 	.mouseup(function() {
@@ -204,8 +137,6 @@ function game() {
 	}
 }
 
-<<<<<<< HEAD
-=======
 //Change player
 function changeplayer() {
 	turn = i = 0;
@@ -227,7 +158,6 @@ function endGame(){
 }
 
 
->>>>>>> smigu/master
 //"ONLOAD"
 $(document).ready(function() {
 	$('#lauta').css({'width':$(window).width(),'height':$(window).height()});
