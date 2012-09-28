@@ -58,12 +58,19 @@ text-align: center;
 
 
   #ylapalkki{
+  position: absolute;
+  top: 205px;
+  left: -201px;
   border: outset 4px black;
-    width:66px;
-    height:472px;
+    width:472px;
+    height:66px;
     margin: 0px 0px 0px 0px;
-    float:left;
     background: #F01D1D;
+    transform: rotate(270deg);
+-ms-transform: rotate(270deg); /* IE 9 */
+-webkit-transform: rotate(270deg); /* Safari and Chrome */
+-o-transform: rotate(270deg); /* Opera */
+-moz-transform: rotate(270deg); /* Firefox */
 }
 
 #p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4 {
@@ -118,14 +125,14 @@ text-align: center;
 
 #message {
 	position:absolute;
-	top:150px;
+	top:160px;
 	left:280px;
 	z-index:4;
 	width:250px;
 	height:150px;
 	display:none;
-	background:#fcfcfc;
-	border:1px #000 solid;
+	background:orange;
+	border:4px #000 ridge;
 }
 
 #scorep1{
@@ -153,9 +160,40 @@ text-align: center;
 
 #infobox{
 border: 2px inset grey;
-width: 300px;
+width: 380px;
 height: 70px;
 float: left;
-margin: 3px 5px 3px 5px;
+margin: 3px 6px 3px 6px;
 text-align: center;
+}
+
+#topboxp1{
+float:left;
+width: 170px;
+height: 58px;
+background: orange;
+margin: 4px 15px 4px 5px;
+text-align: center;
+opacity:0.6;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+#topboxp2{
+float:left;
+width: 170px;
+height: 58px;
+background: orange;
+margin: 4px 5px 4px 5px;
+text-align: center;
+opacity:0.6;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+button.menubutton{
+float:left;
+width: 83px;
+height: 58px;
+background: orange;
+border: outset 4px green;
+margin: 4px 12px 4px 5px; 
 }
