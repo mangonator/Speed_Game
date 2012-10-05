@@ -1,0 +1,172 @@
+/* CSS Document for Apptacular */
+body{
+margin: 0px;
+}
+
+
+p{
+text-align: center;
+}
+
+#board{
+    width:800px;
+    height:480px;
+    border: 2px solid black;
+        background: #EF9F28;
+}
+  #gamearea{
+    width:726px;
+    height:480px;
+    float:left;
+    margin: 0px 0 0px 0;
+    
+
+  }
+  
+      #player1{
+      width:800px;
+      height:220px;
+      margin: 0px 0px 0px 0px;
+      float:left;
+      background: #EF9F28;    
+      padding: 0px 0 0 0px;
+      }
+      
+
+  #keskipalkki{
+      width:800px;
+      height:100px;
+      margin: 0px 0px 50px 0px;
+      float:left;
+      background: #EB3636;
+}
+
+
+
+  #ylapalkki{
+  border: outset 4px black;
+    width:792px;
+    height:66px;
+    margin: 0px 0px 0px 0px;
+    background: #F01D1D;
+}
+
+#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4 {
+	width: 170px;
+	height: 170px;
+	border:1px #000 solid;
+	margin:5px 10px 5px 10px;
+	padding:0;
+  float: left;
+	border-radius:90px;
+	box-shadow:inset 3px 3px 100px #000;
+}
+
+#p1_3, #p2_2 {
+
+}
+#p1_2, #p2_3 {
+
+}
+#p1_1, #p2_4 {
+margin-left: 27px;
+}
+#p2_1, #p2_2, #p2_3, #p2_4 {
+
+}
+#p1_1, #p2_1 {background:rgba(255,0,0,.8);}
+#p1_2, #p2_2 {background:rgba(0,0,255,.8);}
+#p1_3, #p2_3 {background:rgba(0,255,0,.8);}
+#p1_4, #p2_4 {background:rgba(255,255,0,.8);}
+
+
+#overlay {
+	border-radius:100px;
+	position:absolute;
+	z-index:3;
+	width:700px;
+	height:180px;
+	background:rgba(0,0,0,.5);
+	top:20px;
+	left:90px;
+}
+
+
+#turn {
+	width: 40px;
+	height: 40px;
+	font-family:"Verdana" Verdana;
+	font-size: 25px;
+	color:#fcfcfc;
+  float: right;
+}
+
+#message {
+	position:absolute;
+	top:160px;
+	left:280px;
+	z-index:4;
+	width:250px;
+	height:150px;
+	display:none;
+	background:orange;
+	border:4px #000 ridge;
+}
+
+#scorep1{
+border: 2px solid black;
+width: 150px;
+height: 70px;
+float: left;
+margin: 3px 5px 3px 5px;
+text-align: center;
+}
+
+#highscore{
+border: 2px solid black;
+width: 150px;
+height: 70px;
+float: left;
+margin: 3px 5px 3px 5px;
+text-align: center;
+}
+
+#infobox{
+border: 2px inset grey;
+width: 380px;
+height: 70px;
+float: left;
+margin: 3px 6px 3px 6px;
+text-align: center;
+}
+
+#topboxp1{
+float:left;
+width: 170px;
+height: 58px;
+background: orange;
+margin: 4px 15px 4px 5px;
+text-align: center;
+opacity:0.6;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+#topboxp2{
+float:left;
+width: 170px;
+height: 58px;
+background: orange;
+margin: 4px 5px 4px 5px;
+text-align: center;
+opacity:0.6;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+button.menubutton{
+float:left;
+width: 83px;
+height: 58px;
+background: orange;
+border: outset 4px green;
+margin: 4px 12px 4px 5px; 
+}

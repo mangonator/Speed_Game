@@ -135,6 +135,12 @@ text-align: center;
 	border:4px #000 ridge;
 }
 
+#message p{
+margin: 0 auto;
+font-family: calibri;
+}
+
+
 #scorep1{
 border: 2px solid black;
 width: 150px;

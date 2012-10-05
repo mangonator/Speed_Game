@@ -170,7 +170,7 @@ function endGame(){
 	}
 	$('#overlay').css({'top':'20px','height':'480px'});
 	$('#p1_1, #p1_2, #p1_3, #p1_4, #p2_1, #p2_2, #p2_3, #p2_4').css('box-shadow','inset 3px 3px 100px #000');
-	$('#message').fadeIn().html("Player " + player + " got to level: " + (level*1.0-4) + "<br> <input type='button' value='Start turn' onclick='changeplayer()'>");
+	$('#message').fadeIn().html("<p> Player " + player + " got to level: " + (level*1.0-4) + "</p>").mousedown(function(){changeplayer();});
 }
 
 
